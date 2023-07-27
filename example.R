@@ -5,9 +5,9 @@ file_path <- "example_data.csv"
 df <- readr::read_csv(file_path)
 
 # Count the genders from the dataframe
-male_count <- count(df$GENDER == "M")
-female_count <- count(df$GENDER == "F")
-unidentified_count <- count(df$GENDER == "U")
+male_count <- sum(df$GENDER == "M")
+female_count <- sum(df$GENDER == "F")
+unidentified_count <- sum(df$GENDER == "U")
 
 # Summarise the gender count in a formatted string
 formatted_string <- paste("In this dataset there are", male_count, "males and",
