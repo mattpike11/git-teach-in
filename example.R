@@ -27,3 +27,4 @@ plot <- ggplot(df, aes(x = OUTCOME, fill = OUTCOME)) +
 
 # Print the bar chart
 print(plot)
+###
