@@ -20,7 +20,7 @@ print(formatted_string)
 
 # Create the bar chart using ggplot2
 plot <- ggplot(df, aes(x = OUTCOME)) +
-  geom_bar(fill = "red")
+  geom_bar(fill = "skyblue")
 
 # Print the bar chart
 print(plot)
