@@ -18,9 +18,13 @@ formatted_string <- paste("In this dataset there are", male_count, "males and",
                           female_count, "females.", unidentified_count, "people are unidentified.")
 print(formatted_string)
 
+# Replace NA outcome with "Pending"
+df$OUTCOME[is.na(df$OUTCOME)] <- "Pending"
+
 # Create the bar chart using ggplot2
 plot <- ggplot(df, aes(x = OUTCOME, fill = OUTCOME)) +
-  geom_bar()
-
-# Print the bar chart
-print(plot)
+  geom_bar()+
+  coord_flip()+
+  ggtitle(formatted_string)+
+  xlab("Outcome of application")+
+  ylab("Frequency")
