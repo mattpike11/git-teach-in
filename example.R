@@ -1,5 +1,8 @@
 ### Example analysis script ###
 
+library(dplyr)
+library(readr)
+
 # Read local csv containing a dummy dataset
 file_path <- "example_data.csv"
 df <- readr::read_csv(file_path)
