@@ -1,6 +1,7 @@
 ### Example analysis script ###
 
 library(dplyr)
+library(ggplot2)
 library(readr)
 
 # Read local csv containing a dummy dataset
@@ -16,3 +17,10 @@ unidentified_count <- sum(df$GENDER == "U")
 formatted_string <- paste("In this dataset there are", male_count, "males and",
                           female_count, "females.", unidentified_count, "people are unidentified.")
 print(formatted_string)
+
+# Create the bar chart using ggplot2
+plot <- ggplot(df, aes(x = OUTCOME)) +
+  geom_bar(fill = "red")
+
+# Print the bar chart
+print(plot)
