@@ -19,8 +19,8 @@ formatted_string <- paste("In this dataset there are", male_count, "males and",
 print(formatted_string)
 
 # Create the bar chart using ggplot2
-plot <- ggplot(df, aes(x = OUTCOME)) +
-  geom_bar(fill = "skyblue")
+plot <- ggplot(df, aes(x = OUTCOME, fill = OUTCOME)) +
+  geom_bar()
 
 # Print the bar chart
 print(plot)
