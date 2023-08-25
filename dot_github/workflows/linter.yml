@@ -1,5 +1,5 @@
 # Linting .yml file
-name: Lint Code Base
+name: Automated checks
 
 # Start the job on all pull requests
 on:
@@ -24,7 +24,7 @@ jobs:
         run: install.packages("lintr")
         shell: Rscript {0}
 
-      - name: Lint root directory
+      - name: Check code for linting errors
         run: lintr::lint_dir()
         shell: Rscript {0}
         env:
