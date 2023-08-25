@@ -1,4 +1,4 @@
-# An example function to count the genders in a dataframe
+### An example function to count the genders in a dataframe
 
 count_genders <- function(df) {
   # Count the genders from the dataframe
