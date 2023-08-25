@@ -17,3 +17,4 @@ unidentified_count <- sum(df$GENDER == "U")
 formatted_string <- paste("In this dataset there are", male_count, "males and",
                           female_count, "females.", unidentified_count, "people are unidentified.")
 print(formatted_string)
+print("A silly string")
